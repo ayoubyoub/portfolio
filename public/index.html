@@ -2155,9 +2155,7 @@
       let analyticsId = "12345678-9"
     -->
     <script>
-      const { GOOGLE_ANALYTICS_ID } = process.env
-      let analyticsId = GOOGLE_ANALYTICS_ID
-      console.log('analyticsId: ', analyticsId)
+      let analyticsId
       // If analytics id has been manually defined
       if (analyticsId) {
         // Initialize GA with local var
