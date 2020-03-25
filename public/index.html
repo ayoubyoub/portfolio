@@ -2155,18 +2155,16 @@
       let analyticsId = "12345678-9"
     -->
     <script>
-      let analyticsId
-
+      const { GOOGLE_ANALYTICS_ID } = process.env
+      let analyticsId = GOOGLE_ANALYTICS_ID
+      console.log('analyticsId: ', analyticsId)
       // If analytics id has been manually defined
       if (analyticsId) {
         // Initialize GA with local var
         initGoogleAnalytics(analyticsId)
       } else {
         // Initialize GA with Netlify env var available via lamba function
-        fetch("/.netlify/functions/env_vars")
-          .then(getEnvVar)
-          .then(initGoogleAnalytics)
-          .catch(handleError)
+        handleError("error")
       }
 
       // -------------------------------------------------
@@ -2175,17 +2173,6 @@
 
       function handleError(error) {
         console.log("error", error)
-      }
-
-      function getEnvVar(response) {
-        // If the request was successful
-        if (response.ok) {
-          // Return the response text
-          return response.text()
-        } else {
-          // Return a rejected Promise object, triggering the .catch()
-          return Promise.reject(response)
-        }
       }
 
       // Set Up Google Analytics
