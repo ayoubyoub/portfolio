@@ -121,6 +121,9 @@ h3 {
 .full-height {
   height: 100vh;
 }
+.mini-height {
+  height: 20vh;
+}
 #intro.section {
   background: url(../../assets/img/bgdt.jpg) no-repeat top center/cover;
   position: relative;
