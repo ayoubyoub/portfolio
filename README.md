@@ -8,5 +8,5 @@ Tools used to build this website :
 - I recently removed Grunt as a build tool dependency and moved my site hosting to Netlify. All files are completely static (for the time being), but they also live in a `/public` folder instead of the root. If you don't use Netlify, feel free to move everything back into the  root folder instead.
 - Make sure to set `analyticsId` to your unique GA account id inside the `Google Analytics` script tag at the bottom of the `<body>`, if you want to use your own Google Analytics account.
 
-Tous droits réservés © http://andrewborstein.com/
-All rights reserved to andrewborstein
+- All rights reserved © http://andrewborstein.com/
+- Project Merged from simple html to React JS by Me <3 Ayoub Youb
